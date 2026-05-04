@@ -144,6 +144,12 @@ const PROJECTS_DATA = [
     collaborators: "Solo Project",
     metric: "Automated functional feature engineering for predictive market analysis.",
     archFlow: "[yfinance Data] -> [Feature Pipeline] -> [Ensemble Model] -> [Streamlit UI]",
+    images: [
+      "/Stock/Screenshot 2026-05-04 at 1.01.38 PM.png",
+      "/Stock/Screenshot 2026-05-04 at 1.01.47 PM.png",
+      "/Stock/Screenshot 2026-05-04 at 1.02.19 PM.png",
+      "/Stock/Screenshot 2026-05-04 at 1.02.36 PM.png",
+    ],
   },
 ];
 
