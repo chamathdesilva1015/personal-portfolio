@@ -18,7 +18,7 @@ function useInView(ref) {
 /* ── Certification data ────────────────────────────── */
 const CERTIFICATIONS = [
   {
-    title: "Foundations of Risk Management",
+    title: "Foundations of Risk Management Course",
     issuer: "University of Toronto",
     year: "Ongoing / Exp. July 2026",
     focus: [
