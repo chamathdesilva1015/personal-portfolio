@@ -47,10 +47,10 @@ const SOCIAL_LINKS = [
 ];
 
 const CERTIFICATIONS = [
-  "University of Waterloo (ML & AI)",
-  "Harvard (Cybersecurity & Python)",
-  "University of Toronto (ML)",
-  "Google Cybersecurity",
+  "Google Project Management",
+  "CS50: Introduction to Cybersecurity",
+  "UofT Machine Learning",
+  "CS50x: Computer Science",
 ];
 
 export default function Contact() {

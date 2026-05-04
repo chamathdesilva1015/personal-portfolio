@@ -18,39 +18,29 @@ function useInView(ref) {
 /* ── Certification data ────────────────────────────── */
 const CERTIFICATIONS = [
   {
-    title: "Machine Learning & Artificial Intelligence",
-    issuer: "University of Waterloo (SCS)",
-    year: "2025",
+    title: "Google Project Management",
+    issuer: "Google (Coursera)",
+    year: "May 2026",
     focus: [
-      "Neural network architectures: Convolutional Neural Networks (CNNs), Recurrent Neural Networks (RNNs), and Transformer models.",
-      "Unsupervised clustering methods including k-means and DBSCAN for pattern discovery in unlabeled datasets.",
-      "Predictive performance optimization through hyperparameter tuning, cross-validation, and ensemble learning strategies.",
+      "Traditional & Agile Project Management: Scrum frameworks, sprint planning, and Agile execution.",
+      "Strategic planning and execution: Risk management matrices, stakeholder communication, and quality assurance.",
+      "Process improvement and organizational dynamics: Navigating team leadership and utilizing project management software.",
     ],
   },
   {
-    title: "Cybersecurity Certificate",
+    title: "CS50: Introduction to Cybersecurity",
     issuer: "Harvard University",
-    year: "2025",
+    year: "Feb 2026",
     focus: [
-      "Network protocol security: analysis and hardening of TCP/IP, DNS, HTTP/S, and TLS handshake flows.",
-      "Cryptographic risk mitigation using symmetric/asymmetric encryption, hashing algorithms, and PKI infrastructure.",
-      "Enterprise-level vulnerability assessments: threat modeling, penetration testing methodology, and remediation workflows.",
+      "High-level and low-level threats: Securing systems against SQL injection, cross-site scripting (XSS), and buffer overflows.",
+      "Applied Cryptography: Implementation of hashing algorithms, symmetric/asymmetric encryption, and digital signatures.",
+      "Network and Systems Security: Threat modeling, risk assessment, and identity/access management protocols.",
     ],
   },
   {
-    title: "Python for Data Science & Machine Learning",
-    issuer: "Harvard University",
-    year: "2025",
-    focus: [
-      "Advanced feature engineering using Scikit-learn pipelines: encoding strategies, scaling, dimensionality reduction (PCA).",
-      "Statistical modeling: regression analysis, hypothesis testing, Bayesian inference, and probabilistic reasoning.",
-      "Complex data visualization with Matplotlib, Seaborn, and Plotly for multi-dimensional exploratory analysis.",
-    ],
-  },
-  {
-    title: "Machine Learning Certificate",
+    title: "Machine Learning Course",
     issuer: "University of Toronto",
-    year: "2025",
+    year: "Feb 2026",
     focus: [
       "Production-ready ML workflows: model serialization, versioning, CI/CD integration for training pipelines.",
       "Ethical AI deployment: bias auditing, fairness metrics, and responsible model governance frameworks.",
@@ -58,13 +48,53 @@ const CERTIFICATIONS = [
     ],
   },
   {
-    title: "Google Cybersecurity Professional Certificate",
-    issuer: "Google",
-    year: "2025",
+    title: "CS50x: Introduction to Computer Science",
+    issuer: "Harvard University",
+    year: "2026",
     focus: [
-      "Security Information and Event Management (SIEM): log ingestion, correlation rules, and alert triage workflows.",
-      "Incident response orchestration: detection → containment → eradication → recovery → lessons learned lifecycle.",
+      "Low-level programming in C: memory management, pointers, and data structures (hash tables, tries, linked lists).",
+      "Algorithmic efficiency: Analyzing time/space complexity (Big O notation) for searching and sorting algorithms.",
+      "Full-stack web development: Integrating Python, SQL, JavaScript, HTML, and CSS to build dynamic web applications.",
+    ],
+  },
+  {
+    title: "CS109x: Introduction to Data Science with Python",
+    issuer: "Harvard University",
+    year: "Aug 2025",
+    focus: [
+      "Advanced feature engineering using Scikit-learn pipelines: encoding strategies, scaling, dimensionality reduction (PCA).",
+      "Statistical modeling: regression analysis, hypothesis testing, Bayesian inference, and probabilistic reasoning.",
+      "Complex data visualization with Matplotlib, Seaborn, and Pandas for multi-dimensional exploratory analysis.",
+    ],
+  },
+  {
+    title: "Machine Learning",
+    issuer: "University of Waterloo",
+    year: "Aug 2025",
+    focus: [
+      "Neural network architectures: Convolutional Neural Networks (CNNs), Recurrent Neural Networks (RNNs), and Transformer models.",
+      "Unsupervised clustering methods including k-means and DBSCAN for pattern discovery in unlabeled datasets.",
+      "Predictive performance optimization through hyperparameter tuning, cross-validation, and ensemble learning strategies.",
+    ],
+  },
+  {
+    title: "Google Cybersecurity",
+    issuer: "Google (Coursera)",
+    year: "May 2025",
+    focus: [
+      "Security Information and Event Management (SIEM): log ingestion, correlation rules, and alert triage workflows using Splunk/Chronicle.",
+      "Incident response orchestration: detection, containment, eradication, recovery, and lessons learned lifecycle.",
       "Linux/Bash security scripting: automated log analysis, file integrity monitoring, and access control auditing.",
+    ],
+  },
+  {
+    title: "Introduction to Python 3 Programming",
+    issuer: "Education to Go",
+    year: "Apr 2019",
+    focus: [
+      "Foundational Python syntax: control flow, looping mechanisms, and modular function design.",
+      "Data structure manipulation: utilizing lists, dictionaries, tuples, and sets for effective data storage.",
+      "Object-Oriented basic concepts and procedural programming paradigms.",
     ],
   },
 ];
@@ -147,7 +177,7 @@ export default function Certifications() {
 
         {/* Footer note */}
         <p className={`mt-4 text-[10px] font-mono text-text-light ${visible ? "animate-fade-up-delay-3" : "opacity-0"}`}>
-          All certifications completed in 2025. Certificates available upon request.
+          Certificates available for verification upon request.
         </p>
       </div>
     </section>
