@@ -81,7 +81,15 @@ const PROJECTS_DATA = [
     ],
     metric: "Zero-overhead data ingestion from Discord message logs.",
     archFlow: null,
-    images: ["/mediatracker1.png", "/mediatracker2.png", "/mediatracker3.png", "/mediatracker4.png"],
+    images: [
+      "/Silva's Media Tracker/1.png",
+      "/Silva's Media Tracker/2.png",
+      "/Silva's Media Tracker/3.png",
+      "/Silva's Media Tracker/4.png",
+      "/Silva's Media Tracker/5.png",
+      "/Silva's Media Tracker/6.png",
+      "/Silva's Media Tracker/7.png",
+    ],
   },
   {
     id: "E",
