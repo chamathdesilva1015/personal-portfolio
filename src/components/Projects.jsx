@@ -18,7 +18,7 @@ function useInView(ref) {
 const PROJECTS_DATA = [
   {
     id: "A",
-    title: "Architect CLI: The Founder's Project Co-Pilot",
+    title: "Architect",
     github: "https://github.com/chamathdesilva1015/architect",
     problem: "The 'Blank Page' problem causes significant friction when launching complex systems, leading to inconsistent architecture and slowed development velocity.",
     solution: "A data-driven Scaffolding Engine using Jinja2 templates to generate performance-first, decoupled boilerplate across multiple languages (Python, C++, JS).",
@@ -34,7 +34,7 @@ const PROJECTS_DATA = [
   },
   {
     id: "B",
-    title: "CanAfford (The Financial Reality Engine)",
+    title: "CanAfford",
     github: "https://github.com/chamathdesilva1015/CanAfford",
     problem: "Fragmented rental data leads to 'Hidden Math' blindsiding tenants. Standard platforms ignore localized inflation, transit deserts, and legal lease traps.",
     solution: "A localized real estate engine that aggregates StatCan inflation data, real-time transit costs, and uses constrained LLMs to audit lease contracts for legal red flags.",
@@ -57,8 +57,8 @@ const PROJECTS_DATA = [
   },
   {
     id: "C",
-    title: "VRE | Volatility & Risk Engine",
-    github: "https://github.com/chamathdesilva1015/vre",
+    title: "Volatility Risk Engine",
+    github: "https://github.com/chamathdesilva1015/volatility-risk-engine",
     problem: "Unstructured market listings for high-value hardware (GPUs) are rife with malformed data and fraud, making safe purchase decisions difficult.",
     solution: "An automated 8-phase Python OOP pipeline that cleans noisy data, detects statistical anomalies, and generates weighted risk scores.",
     function: "Monitors asset markets to isolate fraudulent or malformed listings and produces professional-grade Excel audit trails with visual volatility charts.",
@@ -73,7 +73,7 @@ const PROJECTS_DATA = [
   },
   {
     id: "D",
-    title: "Concurrent File Search Tool (C++)",
+    title: "Concurrent File Search",
     github: "https://github.com/chamathdesilva1015/concurrent-file-search",
     problem: "Sequential I/O bottlenecks cause massive slowdowns when searching for keywords across large-scale directory trees (1M+ lines of text).",
     solution: "A high-performance C++17 system utilizing a custom thread pool architecture to parallelize file I/O and keyword matching.",
@@ -90,7 +90,7 @@ const PROJECTS_DATA = [
   {
     id: "E",
     title: "Silva's Media Tracker",
-    github: "https://github.com/chamathdesilva1015/media-tracker",
+    github: "https://github.com/chamathdesilva1015/Silvas-Media-Tracker",
     problem: "Mainstream trackers lack high data density and custom statistical taste-profiling, offering generic interfaces that don't satisfy power users.",
     solution: "A standalone, 100% decoupled system with a FastAPI backend and a high-density Vanilla JS frontend optimized for micro-grid display.",
     function: "Automatically enriches user ratings with TMDB/Jikan metadata and calculates custom 'Passion-Volume' indices to visualize personal genre trends.",
@@ -114,7 +114,7 @@ const PROJECTS_DATA = [
   },
   {
     id: "F",
-    title: "AI/ML Stock Prediction Engine",
+    title: "AI/ML Stock Prediction",
     github: "https://github.com/chamathdesilva1015/ai-ml-stock-prediction-web",
     problem: "Retail market analysis often relies on lagging indicators, failing to capture the complex technical patterns visible in historical price movements.",
     solution: "An end-to-end ML pipeline that engineers advanced features and utilizes ensemble learning to forecast short-term asset trends.",
