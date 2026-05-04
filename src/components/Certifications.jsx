@@ -137,11 +137,12 @@ export default function Certifications() {
           </p>
           <span className="accent-bar" />
           <h2 className="sans text-3xl sm:text-4xl md:text-5xl font-black text-text-primary uppercase tracking-tight">
-            Certifications
+            Credentials
           </h2>
           <p className="mt-3 text-sm font-mono text-text-muted max-w-2xl leading-relaxed">
-            Supplementary credentials spanning machine learning, cybersecurity, and data science.
-            Each certificate represents focused study with specific technical outcomes listed below.
+            A comprehensive record of professional certifications and ongoing academic studies. 
+            This repository spans systems engineering, machine learning, and cybersecurity, 
+            while currently expanding into enterprise risk management and project orchestration.
           </p>
         </div>
 
