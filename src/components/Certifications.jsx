@@ -18,6 +18,16 @@ function useInView(ref) {
 /* ── Certification data ────────────────────────────── */
 const CERTIFICATIONS = [
   {
+    title: "Certified Associate in Project Management (CAPM)®",
+    issuer: "Project Management Institute (PMI)",
+    year: "Ongoing",
+    focus: [
+      "Predictive & Plan-Based Methodologies: Mastering Waterfall lifecycle processes, scope management, and critical path scheduling.",
+      "Agile Frameworks & Adaptive Delivery: Application of Scrum roles, artifacts, events, and Lean/Kanban methodologies.",
+      "Business Analysis Frameworks: Needs assessment, stakeholder requirements elicitation, and validation in project environments.",
+    ],
+  },
+  {
     title: "Foundations of Risk Management Course",
     issuer: "University of Toronto",
     year: "Ongoing / Exp. July 2026",
