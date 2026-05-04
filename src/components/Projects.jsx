@@ -261,28 +261,28 @@ function DocProject({ proj, index, visible }) {
             )}
             
             {proj.images && (
-              <div className="mt-5 border border-border bg-white p-2 relative group">
+              <div className="mt-5 border border-border bg-bg-code p-2 relative group h-[300px] sm:h-[450px] flex items-center justify-center overflow-hidden">
                 <img 
                   src={proj.images[currentImg]} 
                   alt={`Screenshot ${currentImg+1}`} 
-                  className="w-full h-auto object-contain border border-grid max-h-[450px]" 
+                  className="max-w-full max-h-full w-auto h-auto object-contain" 
                 />
                 
                 {proj.images.length > 1 && (
                   <>
                     <button 
                       onClick={() => setCurrentImg(p => (p > 0 ? p - 1 : proj.images.length - 1))}
-                      className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black text-white px-3 py-2 font-mono text-xs border border-white/20 transition-colors opacity-0 group-hover:opacity-100"
+                      className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black text-white px-3 py-2 font-mono text-xs border border-white/20 transition-colors opacity-0 group-hover:opacity-100 z-10"
                     >
                       &larr;
                     </button>
                     <button 
                       onClick={() => setCurrentImg(p => (p < proj.images.length - 1 ? p + 1 : 0))}
-                      className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black text-white px-3 py-2 font-mono text-xs border border-white/20 transition-colors opacity-0 group-hover:opacity-100"
+                      className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black text-white px-3 py-2 font-mono text-xs border border-white/20 transition-colors opacity-0 group-hover:opacity-100 z-10"
                     >
                       &rarr;
                     </button>
-                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity z-10">
                       {proj.images.map((_, i) => (
                         <div key={i} className={`w-1.5 h-1.5 ${i === currentImg ? 'bg-accent' : 'bg-white/40'} shadow-sm`} />
                       ))}
