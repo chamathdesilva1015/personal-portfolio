@@ -18,18 +18,35 @@ function useInView(ref) {
 const PROJECTS_DATA = [
   {
     id: "A",
+    title: "Architect CLI: The Founder's Project Co-Pilot",
+    github: "https://github.com/chamathdesilva1015/architect",
+    problem: "The 'Blank Page' problem causes significant friction when launching complex systems, leading to inconsistent architecture and slowed development velocity.",
+    solution: "A data-driven Scaffolding Engine using Jinja2 templates to generate performance-first, decoupled boilerplate across multiple languages (Python, C++, JS).",
+    function: "Enables users to rapidly sketch ideas (SKETCH.md) and instantly generate verified architectural blueprints for web apps, ML pipelines, or concurrent systems.",
+    highlights: [
+      "Engineered a 'Founder's Vault' to persist technical history using a local JSON-based state management system.",
+      "Implemented a Live-Serve automation layer using Python's http.server and webbrowser modules.",
+      "Strict separation of concerns between Domain, API, and UI layers in all generated output."
+    ],
+    collaborators: "Solo Project",
+    metric: "Go from 'Idea Sketch' to 'Running Web App' in < 10 seconds.",
+    archFlow: "[User Command] -> [Typer CLI] -> [Jinja2 Render Engine] -> [Founder's Vault (JSON Log)] -> [File System Injection]",
+  },
+  {
+    id: "B",
     title: "CanAfford (The Financial Reality Engine)",
     github: "https://github.com/chamathdesilva1015/CanAfford",
-    problem:
-      "Fragmented rental data leads to 'Hidden Math' blindsiding tenants. Standard platforms ignore localized grocery inflation, transit deserts, and 'Legal Silos.'",
-    implementation: [
-      "Developed a Financial Reality Engine that intercepts searches to inject real-time StatCan inflation and transit data.",
-      "Engineered a Legal Audit Agent using a constrained LLM pipeline to parse lease PDFs, flagging specific Ontario Residential Tenancies Act (RTA) violations with verified legal citations.",
-      "Built a Bi-Directional State Management system in React to autonomously sync user preferences into a dynamic behavioral model.",
+    problem: "Fragmented rental data leads to 'Hidden Math' blindsiding tenants. Standard platforms ignore localized inflation, transit deserts, and legal lease traps.",
+    solution: "A localized real estate engine that aggregates StatCan inflation data, real-time transit costs, and uses constrained LLMs to audit lease contracts for legal red flags.",
+    function: "Computes the 'True Cost' of survival in a property and acts as a digital paralegal to void illegal lease clauses using the Ontario RTA as a knowledge base.",
+    highlights: [
+      "Engineered an AI Lease Advocate using Gemini 2.5 Flash with strict JSON schemas to strip away hallucinations.",
+      "Built a Bi-Directional State Management system with Backboard API to autonomously sync revealed user behaviors.",
+      "Integrated ElevenLabs Voice AI to generate accessible audio briefs of dense financial and legal audits."
     ],
-    metric:
-      "Solves the Information Silo by unifying Financial, Geographic, and Legal data into one dashboard.",
-    archFlow: null,
+    collaborators: "Solo Project",
+    metric: "Unifies Financial, Geographic, and Legal silos into a single high-density dashboard.",
+    archFlow: "[Rent Data] + [StatCan API] + [Legal PDF] -> [Gemini Analytical Engine] -> [Backboard Memory Vault]",
     images: [
       "/canafford1.png",
       "/canafford2.png",
@@ -39,48 +56,52 @@ const PROJECTS_DATA = [
     ],
   },
   {
-    id: "B",
+    id: "C",
     title: "VRE | Volatility & Risk Engine",
     github: "https://github.com/chamathdesilva1015/vre",
-    problem:
-      "Unstructured market listings for high-value hardware (GPUs) are rife with malformed data and fraud.",
-    implementation: [
-      "Built an 8-Phase OOP Pipeline in Python; each class is isolated for unit testing and fail-loudly logging.",
-      "Implemented Z-Score Anomaly Detection (|Z| > 2) to isolate statistical outliers in real-time.",
-      "Developed a Weighted Risk Matrix: Risk = (Price_Var × 0.7) + ((100 - Trust) × 0.3), binned into Low/Med/High/Critical.",
+    problem: "Unstructured market listings for high-value hardware (GPUs) are rife with malformed data and fraud, making safe purchase decisions difficult.",
+    solution: "An automated 8-phase Python OOP pipeline that cleans noisy data, detects statistical anomalies, and generates weighted risk scores.",
+    function: "Monitors asset markets to isolate fraudulent or malformed listings and produces professional-grade Excel audit trails with visual volatility charts.",
+    highlights: [
+      "Implemented Z-Score Anomaly Detection (|Z| > 2) to isolate price outliers in real-time.",
+      "Developed a Weighted Risk Matrix combining price variance and seller trust scores into a 4-tier risk classification.",
+      "Automated PDF/PNG dashboard generation using Matplotlib and Seaborn for technical trend visualization."
     ],
-    metric:
-      "Automated alerting for >3 critical anomalies with full Excel Audit Trails.",
-    archFlow: null,
-  },
-  {
-    id: "C",
-    title: "Concurrent File Search Tool (C++)",
-    github: "https://github.com/chamathdesilva1015/concurrent-file-search",
-    problem:
-      "Sequential I/O bottlenecks when searching massive datasets (1M+ lines).",
-    implementation: [
-      "Engineered a Custom Thread Pool from scratch using std::condition_variable and std::unique_lock.",
-      "Implemented a RAII-managed Task Queue with mutex-protected result aggregation to prevent race conditions.",
-      "Utilized C++17 std::filesystem for optimized recursive directory traversal.",
-    ],
-    metric: "Verified 6.63x speedup (1114ms → 168ms) using 10+ worker threads.",
-    archFlow:
-      "[FileSearcher] -> [ThreadPool (Mutex Locked Queue)] -> [10x WorkerThreads] -> [Atomic Result Aggregator]",
+    collaborators: "Solo Project",
+    metric: "Automated alerting for >3 critical anomalies with full Excel Audit Trails.",
+    archFlow: "[Raw Listings] -> [OOP Cleaning Class] -> [Statistical Analyzer] -> [Risk Matrix] -> [Excel/PNG Output]",
   },
   {
     id: "D",
+    title: "Concurrent File Search Tool (C++)",
+    github: "https://github.com/chamathdesilva1015/concurrent-file-search",
+    problem: "Sequential I/O bottlenecks cause massive slowdowns when searching for keywords across large-scale directory trees (1M+ lines of text).",
+    solution: "A high-performance C++17 system utilizing a custom thread pool architecture to parallelize file I/O and keyword matching.",
+    function: "Recursively traverses complex file systems to find string matches, utilizing all available CPU cores to minimize search latency.",
+    highlights: [
+      "Engineered a custom Thread Pool from scratch using std::condition_variable and std::unique_lock.",
+      "Implemented a RAII-managed task queue with mutex-protected result aggregation to prevent race conditions.",
+      "Utilized C++17 std::filesystem for optimized, non-blocking directory traversal."
+    ],
+    collaborators: "Solo Project",
+    metric: "Verified 6.63x speedup (1114ms → 168ms) using custom thread pool optimization.",
+    archFlow: "[FileSearcher] -> [ThreadPool (Mutex Locked Queue)] -> [WorkerThreads] -> [Atomic Result Aggregator]",
+  },
+  {
+    id: "E",
     title: "Silva's Media Tracker",
     github: "https://github.com/chamathdesilva1015/media-tracker",
-    problem:
-      "Mainstream media trackers lack extreme data density, forcing power users through cluttered interfaces without meaningful, statistical taste-profiling.",
-    implementation: [
-      "Engineered a standalone Python backend (FastAPI, SQLModel) integrated with TMDB/Jikan APIs for automated metadata enrichment.",
-      "Developed a custom 'Passion-Volume Index' and statistical taste-modeling algorithms to dynamically analyze top genres and directors.",
-      "Built a highly responsive, Glassmorphism-styled Vanilla SPA optimized for micro-grid mobile displays and 5-column widescreen density.",
+    problem: "Mainstream trackers lack high data density and custom statistical taste-profiling, offering generic interfaces that don't satisfy power users.",
+    solution: "A standalone, 100% decoupled system with a FastAPI backend and a high-density Vanilla JS frontend optimized for micro-grid display.",
+    function: "Automatically enriches user ratings with TMDB/Jikan metadata and calculates custom 'Passion-Volume' indices to visualize personal genre trends.",
+    highlights: [
+      "Developed custom taste-modeling algorithms to dynamically analyze genre and director preferences.",
+      "Built a Glassmorphism-styled SPA optimized for both mobile micro-grids and 5-column widescreen density.",
+      "Integrated a high-availability Supabase PostgreSQL layer for persistent, cloud-based data storage."
     ],
-    metric: "100% decoupled standalone architecture utilizing a high-availability Supabase PostgreSQL layer.",
-    archFlow: null,
+    collaborators: "Solo Project",
+    metric: "100% standalone V10 architecture utilizing a fully decoupled REST backend.",
+    archFlow: "[Frontend SPA] -> [FastAPI REST Layer] -> [TMDB/Jikan API] -> [Supabase PostgreSQL]",
     images: [
       "/Silva's Media Tracker/1.png",
       "/Silva's Media Tracker/2.png",
@@ -92,18 +113,20 @@ const PROJECTS_DATA = [
     ],
   },
   {
-    id: "E",
+    id: "F",
     title: "AI/ML Stock Prediction Engine",
     github: "https://github.com/chamathdesilva1015/ai-ml-stock-prediction-web",
-    problem:
-      "Retail market analysis relies on lagging indicators, failing to capture complex, multi-variable technical patterns.",
-    implementation: [
-      "Built a Python prediction engine using ensemble machine learning models to forecast asset trends.",
-      "Engineered a scalable feature pipeline utilizing quantitative metrics (e.g., RSI, MACD, Bollinger Bands).",
-      "Deployed a full-stack web interface to visualize technical data and statistical model confidence in real-time."
+    problem: "Retail market analysis often relies on lagging indicators, failing to capture the complex technical patterns visible in historical price movements.",
+    solution: "An end-to-end ML pipeline that engineers advanced features and utilizes ensemble learning to forecast short-term asset trends.",
+    function: "Ingests market data, calculates quantitative metrics (RSI, MACD, Bollinger Bands), and visualizes model confidence for 1-day and 5-day forecasts.",
+    highlights: [
+      "Built a prediction engine using Random Forest and Gradient Boosting ensembles for robust inference.",
+      "Engineered a scalable feature pipeline for automated technical indicator generation from raw price data.",
+      "Implemented a modular 'Offline Training / Online Inference' structure to ensure rapid deployment of new models."
     ],
+    collaborators: "Solo Project",
     metric: "Automated functional feature engineering for predictive market analysis.",
-    archFlow: null,
+    archFlow: "[yfinance Data] -> [Feature Pipeline] -> [Ensemble Model] -> [Streamlit UI]",
   },
 ];
 
@@ -112,13 +135,13 @@ function DocProject({ proj, index, visible }) {
 
   return (
     <div
-      className={`border-b-2 border-border py-10 last:border-b-0 ${
+      className={`border-b-2 border-border py-12 last:border-b-0 ${
         visible ? "animate-fade-up" : "opacity-0"
       }`}
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-        {/* Header Column: ID, Title & Code Button */}
+        {/* Header Column: ID, Title & Source */}
         <div className="lg:col-span-3 flex flex-col items-start gap-4">
           <div>
             <span className="text-[10px] font-mono font-bold tracking-[0.2em] text-accent uppercase mb-1 block">
@@ -127,6 +150,9 @@ function DocProject({ proj, index, visible }) {
             <h3 className="sans text-xl font-extrabold text-text-primary uppercase tracking-tight leading-tight">
               {proj.title}
             </h3>
+            <p className="mt-2 text-[10px] font-mono text-text-muted font-bold italic">
+              // {proj.collaborators}
+            </p>
           </div>
           <a
             href={proj.github}
@@ -141,33 +167,54 @@ function DocProject({ proj, index, visible }) {
           </a>
         </div>
 
-        {/* Content Column: Problem, Implementation, Metric */}
-        <div className="lg:col-span-9 flex flex-col gap-6">
-          {/* Problem Statement */}
+        {/* Content Column */}
+        <div className="lg:col-span-9 flex flex-col gap-8">
+          {/* Problem & Solution Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <span className="text-[10px] font-mono font-bold text-accent uppercase tracking-widest mb-2 block border-b border-grid pb-1">
+                01. Problem Statement
+              </span>
+              <p className="font-mono text-xs text-text-primary leading-relaxed">
+                {proj.problem}
+              </p>
+            </div>
+            <div>
+              <span className="text-[10px] font-mono font-bold text-text-primary uppercase tracking-widest mb-2 block border-b border-grid pb-1">
+                02. Engineering Solution
+              </span>
+              <p className="font-mono text-xs text-text-primary leading-relaxed italic">
+                {proj.solution}
+              </p>
+            </div>
+          </div>
+
+          {/* Functionality */}
           <div>
-            <span className="text-[10px] font-mono font-bold text-text-light uppercase tracking-widest border-b border-border pb-1 mb-2 block">
-              1.0 Define Problem Context
+            <span className="text-[10px] font-mono font-bold text-text-light uppercase tracking-widest mb-2 block border-b border-grid pb-1">
+              03. Operational Summary
             </span>
-            <p className="font-mono text-sm text-text-primary leading-[1.7] border-l-2 border-accent pl-4">
-              {proj.problem}
+            <p className="font-mono text-xs text-text-secondary leading-relaxed">
+              {proj.function}
             </p>
           </div>
 
-          {/* Implementation Detail */}
-          <div className="bg-bg-white border-2 border-border p-5">
+          {/* Technical Highlights */}
+          <div className="bg-bg-code border border-border p-5">
             <span className="text-[10px] font-mono font-bold text-text-light uppercase tracking-widest block mb-4 border-b border-grid pb-2">
-              2.0 Implementation (The "Work")
+              04. Technical Highlights
             </span>
-            <ul className="space-y-3 font-mono text-xs text-text-secondary">
-              {proj.implementation.map((item, i) => (
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 font-mono text-[11px] text-text-secondary">
+              {proj.highlights.map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <span className="text-accent mt-0.5 shrink-0 select-none">▸</span>
                   <span className="leading-relaxed">{item}</span>
                 </li>
               ))}
             </ul>
+            
             {proj.archFlow && (
-              <div className="mt-5 p-3 bg-bg-code border border-dashed border-grid overflow-x-auto">
+              <div className="mt-5 p-3 bg-white border border-dashed border-border overflow-x-auto">
                 <span className="text-[9px] font-mono tracking-widest text-text-muted uppercase block mb-1">
                   Architecture Flow:
                 </span>
@@ -178,11 +225,11 @@ function DocProject({ proj, index, visible }) {
             )}
             
             {proj.images && (
-              <div className="mt-5 border border-border bg-bg-code p-2 relative group">
+              <div className="mt-5 border border-border bg-white p-2 relative group">
                 <img 
                   src={proj.images[currentImg]} 
                   alt={`Screenshot ${currentImg+1}`} 
-                  className="w-full h-auto object-contain border border-grid max-h-[500px]" 
+                  className="w-full h-auto object-contain border border-grid max-h-[450px]" 
                 />
                 
                 {proj.images.length > 1 && (
@@ -201,7 +248,7 @@ function DocProject({ proj, index, visible }) {
                     </button>
                     <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
                       {proj.images.map((_, i) => (
-                        <div key={i} className={`w-2 h-2 ${i === currentImg ? 'bg-accent' : 'bg-white/40'} shadow-sm`} />
+                        <div key={i} className={`w-1.5 h-1.5 ${i === currentImg ? 'bg-accent' : 'bg-white/40'} shadow-sm`} />
                       ))}
                     </div>
                   </>
@@ -211,11 +258,11 @@ function DocProject({ proj, index, visible }) {
           </div>
 
           {/* Technical Metric */}
-          <div className="flex items-start gap-4">
-            <div className="px-2 py-1 bg-text-primary text-bg-primary text-[10px] font-black font-mono tracking-widest uppercase shrink-0 mt-0.5">
-              METRIC
+          <div className="flex items-start gap-4 border-t border-grid pt-4">
+            <div className="px-2 py-0.5 bg-accent text-white text-[9px] font-black font-mono tracking-widest uppercase shrink-0 mt-0.5">
+              RESULT
             </div>
-            <p className="font-mono text-xs sm:text-sm font-semibold tracking-wide text-text-primary">
+            <p className="font-mono text-xs font-bold tracking-tight text-text-primary">
               {proj.metric}
             </p>
           </div>
@@ -244,14 +291,14 @@ export default function Projects() {
                 05// Active Engineering Log
               </p>
               <h2 className="sans text-4xl sm:text-5xl font-black text-text-primary uppercase tracking-tighter">
-                Architecture &amp; Documentation
+                Engineering Portfolio
               </h2>
             </div>
           </div>
           <p className="text-sm font-mono text-text-secondary max-w-3xl leading-relaxed">
-            Detailed breakdown of system architecture, concurrent workloads, and full-stack implementations. 
-            Information density takes precedence over white space. Every project identifies a structural 
-            problem and outlines the granular technical action taken to produce a measurable result.
+            A comprehensive record of systems development, automated data pipelines, and full-stack architecture. 
+            Every log identifies a specific structural problem and outlines the technical action taken 
+            to produce a measurable result.
           </p>
         </div>
 
