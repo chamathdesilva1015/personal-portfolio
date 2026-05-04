@@ -28,7 +28,7 @@ const PROJECTS_DATA = [
       "Implemented a Live-Serve automation layer using Python's http.server and webbrowser modules.",
       "Strict separation of concerns between Domain, API, and UI layers in all generated output."
     ],
-    collaborators: "Solo Project",
+    collaborators: "Collaborative Project // with Ryan Massey",
     metric: "Go from 'Idea Sketch' to 'Running Web App' in < 10 seconds.",
     archFlow: "[User Command] -> [Typer CLI] -> [Jinja2 Render Engine] -> [Founder's Vault (JSON Log)] -> [File System Injection]",
   },
@@ -44,7 +44,7 @@ const PROJECTS_DATA = [
       "Built a Bi-Directional State Management system with Backboard API to autonomously sync revealed user behaviors.",
       "Integrated ElevenLabs Voice AI to generate accessible audio briefs of dense financial and legal audits."
     ],
-    collaborators: "Solo Project",
+    collaborators: "Collaborative Project // with Rishabh Dhall",
     metric: "Unifies Financial, Geographic, and Legal silos into a single high-density dashboard.",
     archFlow: "[Rent Data] + [StatCan API] + [Legal PDF] -> [Gemini Analytical Engine] -> [Backboard Memory Vault]",
     images: [
