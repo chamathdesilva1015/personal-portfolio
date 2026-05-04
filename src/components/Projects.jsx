@@ -20,6 +20,11 @@ const PROJECTS_DATA = [
     id: "A",
     title: "Architect",
     github: "https://github.com/chamathdesilva1015/architect",
+    team: [
+      { name: "Ryan Massey", github: "https://github.com/RyanMassey2004" },
+      { name: "Rishabh Dhall", github: "https://github.com/RishabhDhall02" },
+      { name: "Yujiro Fujii", github: "https://github.com/YujiroFujii10" },
+    ],
     problem: "The 'Blank Page' problem causes significant friction when launching complex systems, leading to inconsistent architecture and slowed development velocity.",
     solution: "A data-driven Scaffolding Engine using Jinja2 templates to generate performance-first, decoupled boilerplate across multiple languages (Python, C++, JS).",
     function: "Enables users to rapidly sketch ideas (SKETCH.md) and instantly generate verified architectural blueprints for web apps, ML pipelines, or concurrent systems.",
@@ -28,7 +33,7 @@ const PROJECTS_DATA = [
       "Implemented a Live-Serve automation layer using Python's http.server and webbrowser modules.",
       "Strict separation of concerns between Domain, API, and UI layers in all generated output."
     ],
-    collaborators: "Collaborative Project // with Ryan Massey",
+    collaborators: "Collaborative Project",
     metric: "Go from 'Idea Sketch' to 'Running Web App' in < 10 seconds.",
     archFlow: "[User Command] -> [Typer CLI] -> [Jinja2 Render Engine] -> [Founder's Vault (JSON Log)] -> [File System Injection]",
   },
@@ -36,6 +41,9 @@ const PROJECTS_DATA = [
     id: "B",
     title: "CanAfford",
     github: "https://github.com/chamathdesilva1015/CanAfford",
+    team: [
+      { name: "Rishabh Dhall", github: "https://github.com/RishabhDhall02" },
+    ],
     problem: "Fragmented rental data leads to 'Hidden Math' blindsiding tenants. Standard platforms ignore localized inflation, transit deserts, and legal lease traps.",
     solution: "A localized real estate engine that aggregates StatCan inflation data, real-time transit costs, and uses constrained LLMs to audit lease contracts for legal red flags.",
     function: "Computes the 'True Cost' of survival in a property and acts as a digital paralegal to void illegal lease clauses using the Ontario RTA as a knowledge base.",
@@ -44,7 +52,7 @@ const PROJECTS_DATA = [
       "Built a Bi-Directional State Management system with Backboard API to autonomously sync revealed user behaviors.",
       "Integrated ElevenLabs Voice AI to generate accessible audio briefs of dense financial and legal audits."
     ],
-    collaborators: "Collaborative Project // with Rishabh Dhall",
+    collaborators: "Collaborative Project",
     metric: "Unifies Financial, Geographic, and Legal silos into a single high-density dashboard.",
     archFlow: "[Rent Data] + [StatCan API] + [Legal PDF] -> [Gemini Analytical Engine] -> [Backboard Memory Vault]",
     images: [
@@ -154,17 +162,36 @@ function DocProject({ proj, index, visible }) {
               // {proj.collaborators}
             </p>
           </div>
-          <a
-            href={proj.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-3 py-1.5 border-2 border-border hover:border-text-primary text-text-secondary hover:text-text-primary transition-colors duration-150 bg-bg-code text-[11px] font-mono font-semibold tracking-wider uppercase"
-          >
-            <svg className="w-3.5 h-3.5 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 .5C5.37.5 0 5.78 0 12.292c0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.333-1.723-1.333-1.723-1.089-.73.083-.715.083-.715 1.205.083 1.838 1.215 1.838 1.215 1.07 1.8 2.808 1.28 3.492.978.108-.76.418-1.28.762-1.575-2.665-.296-5.466-1.309-5.466-5.827 0-1.287.465-2.34 1.228-3.165-.123-.298-.532-1.497.117-3.12 0 0 1.001-.314 3.28 1.209A11.513 11.513 0 0112 6.844c1.02.005 2.047.136 3.006.398 2.277-1.523 3.276-1.209 3.276-1.209.651 1.623.242 2.822.12 3.12.765.825 1.226 1.878 1.226 3.165 0 4.53-2.805 5.527-5.475 5.818.43.364.823 1.084.823 2.185 0 1.577-.014 2.849-.014 3.236 0 .315.216.683.825.567C20.565 21.917 24 17.5 24 12.292 24 5.78 18.627.5 12 .5z" />
-            </svg>
-            SOURCE
-          </a>
+          
+          <div className="flex flex-col gap-2 w-full">
+            <a
+              href={proj.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-3 py-1.5 border-2 border-border hover:border-text-primary text-text-secondary hover:text-text-primary transition-colors duration-150 bg-bg-code text-[11px] font-mono font-semibold tracking-wider uppercase w-fit"
+            >
+              <svg className="w-3.5 h-3.5 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 .5C5.37.5 0 5.78 0 12.292c0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.333-1.723-1.333-1.723-1.089-.73.083-.715.083-.715 1.205.083 1.838 1.215 1.838 1.215 1.07 1.8 2.808 1.28 3.492.978.108-.76.418-1.28.762-1.575-2.665-.296-5.466-1.309-5.466-5.827 0-1.287.465-2.34 1.228-3.165-.123-.298-.532-1.497.117-3.12 0 0 1.001-.314 3.28 1.209A11.513 11.513 0 0112 6.844c1.02.005 2.047.136 3.006.398 2.277-1.523 3.276-1.209 3.276-1.209.651 1.623.242 2.822.12 3.12.765.825 1.226 1.878 1.226 3.165 0 4.53-2.805 5.527-5.475 5.818.43.364.823 1.084.823 2.185 0 1.577-.014 2.849-.014 3.236 0 .315.216.683.825.567C20.565 21.917 24 17.5 24 12.292 24 5.78 18.627.5 12 .5z" />
+              </svg>
+              SOURCE
+            </a>
+
+            {proj.team && (
+              <div className="flex flex-wrap gap-2 mt-2">
+                {proj.team.map((member) => (
+                  <a
+                    key={member.github}
+                    href={member.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[9px] font-mono font-bold px-2 py-1 border border-border hover:border-accent text-text-light hover:text-accent transition-all duration-150 bg-white"
+                  >
+                    @{member.name.split(' ')[0]}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Content Column */}
