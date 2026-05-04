@@ -182,7 +182,7 @@ function DocProject({ proj, index, visible }) {
                 <img 
                   src={proj.images[currentImg]} 
                   alt={`Screenshot ${currentImg+1}`} 
-                  className="w-full h-auto object-cover border border-grid max-h-[500px]" 
+                  className="w-full h-auto object-contain border border-grid max-h-[500px]" 
                 />
                 
                 {proj.images.length > 1 && (
