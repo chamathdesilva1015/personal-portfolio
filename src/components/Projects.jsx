@@ -186,7 +186,7 @@ function DocProject({ proj, index, visible }) {
                     rel="noopener noreferrer"
                     className="text-[9px] font-mono font-bold px-2 py-1 border border-border hover:border-accent text-text-light hover:text-accent transition-all duration-150 bg-white"
                   >
-                    @{member.name.split(' ')[0]}
+                    {member.name}
                   </a>
                 ))}
               </div>
