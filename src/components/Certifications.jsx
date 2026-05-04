@@ -18,6 +18,16 @@ function useInView(ref) {
 /* ── Certification data ────────────────────────────── */
 const CERTIFICATIONS = [
   {
+    title: "Foundations of Risk Management",
+    issuer: "University of Toronto",
+    year: "Ongoing / Exp. July 2026",
+    focus: [
+      "Enterprise Risk Management (ERM): Identifying and assessing risks from a comprehensive, organization-wide perspective.",
+      "Risk Identification & Analysis: Utilizing tools like risk registers and heat mapping to analyze qualitative and quantitative impact.",
+      "Global Standards & Control: Application of international risk frameworks and oversight mechanisms for governance and control.",
+    ],
+  },
+  {
     title: "Google Project Management",
     issuer: "Google (Coursera)",
     year: "May 2026",
