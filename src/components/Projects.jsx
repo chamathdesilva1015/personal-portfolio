@@ -73,13 +73,13 @@ const PROJECTS_DATA = [
     title: "Silva's Media Tracker",
     github: "https://github.com/chamathdesilva1015/media-tracker",
     problem:
-      "Bloated tracking apps lack centralization with personal communication logs (Discord).",
+      "Mainstream media trackers lack extreme data density, forcing power users through cluttered interfaces without meaningful, statistical taste-profiling.",
     implementation: [
-      "Built a FastAPI/SQLModel backend with discord_sync.py to ingest data via Regex-based API parsing.",
-      "Developed a Fuzzy-Year Matching System (±2 years) to solve data deduplication from manual entry errors.",
-      "UI optimized with Skeleton Loading States and Glassmorphism for high perceived performance.",
+      "Engineered a standalone Python backend (FastAPI, SQLModel) integrated with TMDB/Jikan APIs for automated metadata enrichment.",
+      "Developed a custom 'Passion-Volume Index' and statistical taste-modeling algorithms to dynamically analyze top genres and directors.",
+      "Built a highly responsive, Glassmorphism-styled Vanilla SPA optimized for micro-grid mobile displays and 5-column widescreen density.",
     ],
-    metric: "Zero-overhead data ingestion from Discord message logs.",
+    metric: "100% decoupled standalone architecture utilizing a high-availability Supabase PostgreSQL layer.",
     archFlow: null,
     images: [
       "/Silva's Media Tracker/1.png",
