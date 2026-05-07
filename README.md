@@ -4,7 +4,7 @@ A professional, high-contrast dark-mode developer portfolio built with **React**
 
 ---
 
-## 🖥 Live Preview
+## Live Preview
 
 ```bash
 npm run dev
@@ -14,7 +14,7 @@ Then open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ---
 
-## ✨ Features
+## Features
 
 - **Dark-mode design** — deep blacks/grays with electric indigo (`#6366f1`) accent
 - **Responsive** — mobile-first layout with animated hamburger nav
@@ -26,7 +26,7 @@ Then open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 portfolio/
@@ -50,7 +50,7 @@ portfolio/
 
 ---
 
-## 🛠 Customization Guide
+## Customization Guide
 
 All personal content is stored in **configurable constants** at the top of each component file. No digging through JSX required.
 
@@ -68,7 +68,7 @@ All personal content is stored in **configurable constants** at the top of each 
 
 ---
 
-## 🚀 Deploy to Vercel
+## Deploy to Vercel
 
 1. Push this repo to GitHub.
 2. Go to [vercel.com](https://vercel.com) → **Add New Project** → Import your repo.
@@ -84,7 +84,7 @@ In Vercel Dashboard → **Settings → Domains** → Add your custom domain and 
 
 ---
 
-## 🚀 Deploy to Netlify
+## Deploy to Netlify
 
 1. Push this repo to GitHub.
 2. Go to [app.netlify.com](https://app.netlify.com) → **Add new site → Import an existing project**.
@@ -108,7 +108,7 @@ netlify deploy --prod --dir=dist
 
 ---
 
-## 📦 Tech Stack
+## Tech Stack
 
 | Tool | Purpose |
 |---|---|
