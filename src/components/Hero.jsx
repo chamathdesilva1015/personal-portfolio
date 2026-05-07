@@ -1,3 +1,5 @@
+import { useState, useRef, useEffect } from "react";
+
 /* ── Configurable logo/org entries ──────────────── */
 const LOGOS = [
   "McMASTER UNIVERSITY",
@@ -8,7 +10,27 @@ const LOGOS = [
   "IEEE",
 ];
 
+const RESUMES = [
+  { name: "Fullstack & Product", file: "/Resume-Fullstack&Product.pdf" },
+  { name: "Systems & Performance", file: "/Resume-Systems&Performance.pdf" },
+  { name: "Data Science & AI", file: "/Resume-Data Science&AI.pdf" },
+];
+
 export default function Hero() {
+  const [showResumes, setShowResumes] = useState(false);
+  const dropdownRef = useRef(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setShowResumes(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
     <section id="home" className="relative z-10">
       {/* ── Text content ────────────────────────── */}
@@ -72,17 +94,44 @@ export default function Hero() {
                 GITHUB
               </a>
 
-              {/* Resume */}
-              <a
-                href="/resume.pdf"
-                download
-                className="inline-flex items-center gap-2 px-6 py-3 border-2 border-border hover:border-text-primary text-text-secondary hover:text-text-primary bg-bg-code text-xs font-bold tracking-[0.15em] uppercase transition-all duration-150"
-              >
-                <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-                DOWNLOAD RESUME
-              </a>
+              {/* Multi-Resume Dropdown */}
+              <div className="relative" ref={dropdownRef}>
+                <button
+                  onClick={() => setShowResumes(!showResumes)}
+                  className={`inline-flex items-center gap-2 px-6 py-3 border-2 transition-all duration-150 text-xs font-bold tracking-[0.15em] uppercase ${
+                    showResumes 
+                      ? "border-text-primary text-text-primary bg-white shadow-lg" 
+                      : "border-border text-text-secondary hover:border-text-primary hover:text-text-primary bg-bg-code"
+                  }`}
+                >
+                  <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  DOWNLOAD RESUME
+                  <svg className={`w-3 h-3 ml-1 transition-transform duration-200 ${showResumes ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+
+                {showResumes && (
+                  <div className="absolute left-0 sm:left-auto sm:right-0 top-full mt-2 w-64 bg-white border-2 border-text-primary shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] z-50 animate-fade-in">
+                    <div className="p-2 border-b border-border bg-bg-code">
+                      <p className="text-[9px] font-mono font-bold text-text-light uppercase tracking-widest">Select Version:</p>
+                    </div>
+                    {RESUMES.map((r) => (
+                      <a
+                        key={r.file}
+                        href={r.file}
+                        download
+                        onClick={() => setShowResumes(false)}
+                        className="block w-full text-left px-4 py-3 text-[10px] font-mono font-bold text-text-secondary hover:text-accent hover:bg-bg-code border-b last:border-b-0 border-border transition-colors uppercase tracking-wider"
+                      >
+                        {r.name}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
