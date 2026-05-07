@@ -34,7 +34,7 @@ export default function Hero() {
   return (
     <section id="home" className="relative z-10">
       {/* ── Text content ────────────────────────── */}
-      <div className="relative w-full pt-32 pb-16 sm:pb-20 px-4 md:px-8 border-b section-grid-border">
+      <div className="relative z-20 w-full pt-32 pb-16 sm:pb-20 px-4 md:px-8 border-b section-grid-border">
         <div className="mx-auto max-w-7xl w-full">
             {/* Section marker */}
             <p className="animate-fade-up text-[11px] font-mono font-semibold tracking-[0.3em] text-text-light mb-2 uppercase">
