@@ -16,15 +16,30 @@ const RESUMES = [
   { name: "Data Science & AI", file: "/Resume-Data Science&AI.pdf" },
 ];
 
+const GITHUB_LINKS = [
+  { name: "Main Profile", url: "https://github.com/chamathdesilva1015" },
+  { name: "Media Tracker", url: "https://github.com/chamathdesilva1015/Silvas-Media-Tracker" },
+  { name: "CanAfford", url: "https://github.com/chamathdesilva1015/CanAfford" },
+  { name: "File Search", url: "https://github.com/chamathdesilva1015/concurrent-file-search" },
+  { name: "Stock Predict", url: "https://github.com/chamathdesilva1015/ai-ml-stock-prediction-web" },
+  { name: "Risk Engine", url: "https://github.com/chamathdesilva1015/volatility-risk-engine" },
+  { name: "Architect", url: "https://github.com/chamathdesilva1015/architect" },
+];
+
 export default function Hero() {
   const [showResumes, setShowResumes] = useState(false);
+  const [showGithub, setShowGithub] = useState(false);
   const dropdownRef = useRef(null);
+  const githubRef = useRef(null);
 
-  // Close dropdown when clicking outside
+  // Close dropdowns when clicking outside
   useEffect(() => {
     function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setShowResumes(false);
+      }
+      if (githubRef.current && !githubRef.current.contains(event.target)) {
+        setShowGithub(false);
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
@@ -81,18 +96,53 @@ export default function Hero() {
                 LINKEDIN
               </a>
 
-              {/* GitHub */}
-              <a
-                href="https://github.com/chamathdesilva1015"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 border-2 border-border hover:border-text-primary text-text-secondary hover:text-text-primary bg-bg-code text-xs font-bold tracking-[0.15em] uppercase transition-all duration-150"
-              >
-                <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 .5C5.37.5 0 5.78 0 12.292c0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.333-1.723-1.333-1.723-1.089-.73.083-.715.083-.715 1.205.083 1.838 1.215 1.838 1.215 1.07 1.8 2.808 1.28 3.492.978.108-.76.418-1.28.762-1.575-2.665-.296-5.466-1.309-5.466-5.827 0-1.287.465-2.34 1.228-3.165-.123-.298-.532-1.497.117-3.12 0 0 1.001-.314 3.28 1.209A11.513 11.513 0 0112 6.844c1.02.005 2.047.136 3.006.398 2.277-1.523 3.276-1.209 3.276-1.209.651 1.623.242 2.822.12 3.12.765.825 1.226 1.878 1.226 3.165 0 4.53-2.805 5.527-5.475 5.818.43.364.823 1.084.823 2.185 0 1.577-.014 2.849-.014 3.236 0 .315.216.683.825.567C20.565 21.917 24 17.5 24 12.292 24 5.78 18.627.5 12 .5z" />
-                </svg>
-                GITHUB
-              </a>
+              {/* GitHub Accordion */}
+              <div className="flex flex-col gap-0 w-full sm:w-auto" ref={githubRef}>
+                <button
+                  onClick={() => setShowGithub(!showGithub)}
+                  className={`inline-flex items-center justify-between sm:justify-start gap-4 px-6 py-3 border-2 transition-all duration-300 text-xs font-bold tracking-[0.15em] uppercase w-full sm:w-auto ${
+                    showGithub 
+                      ? "border-text-primary text-text-primary bg-bg-code" 
+                      : "border-border text-text-secondary hover:border-text-primary hover:text-text-primary bg-bg-code"
+                  }`}
+                >
+                  <div className="flex items-center gap-2">
+                    <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 .5C5.37.5 0 5.78 0 12.292c0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.333-1.723-1.333-1.723-1.089-.73.083-.715.083-.715 1.205.083 1.838 1.215 1.838 1.215 1.07 1.8 2.808 1.28 3.492.978.108-.76.418-1.28.762-1.575-2.665-.296-5.466-1.309-5.466-5.827 0-1.287.465-2.34 1.228-3.165-.123-.298-.532-1.497.117-3.12 0 0 1.001-.314 3.28 1.209A11.513 11.513 0 0112 6.844c1.02.005 2.047.136 3.006.398 2.277-1.523 3.276-1.209 3.276-1.209.651 1.623.242 2.822.12 3.12.765.825 1.226 1.878 1.226 3.165 0 4.53-2.805 5.527-5.475 5.818.43.364.823 1.084.823 2.185 0 1.577-.014 2.849-.014 3.236 0 .315.216.683.825.567C20.565 21.917 24 17.5 24 12.292 24 5.78 18.627.5 12 .5z" />
+                    </svg>
+                    GITHUB
+                  </div>
+                  <svg className={`w-3 h-3 transition-transform duration-300 ${showGithub ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+
+                <div 
+                  className={`grid transition-all duration-300 ease-in-out ${
+                    showGithub ? "grid-rows-[1fr] opacity-100 mt-2" : "grid-rows-[0fr] opacity-0 mt-0"
+                  }`}
+                >
+                  <div className="overflow-hidden border-x-2 border-b-2 border-border bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <div className="p-3 border-b border-border bg-bg-code">
+                      <p className="text-[10px] font-mono font-bold text-text-light uppercase tracking-widest">Repositories:</p>
+                    </div>
+                    {GITHUB_LINKS.map((link) => (
+                      <a
+                        key={link.url}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setShowGithub(false)}
+                        className="block w-full text-left px-5 py-3 text-[11px] font-mono font-bold text-text-secondary hover:text-accent hover:bg-bg-code border-b last:border-b-0 border-border transition-all uppercase tracking-wider group"
+                      >
+                        <span className="group-hover:translate-x-1 inline-block transition-transform duration-150">
+                          {link.name}
+                        </span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
 
               {/* Multi-Resume Accordion */}
               <div className="flex flex-col gap-0 w-full sm:w-auto" ref={dropdownRef}>
