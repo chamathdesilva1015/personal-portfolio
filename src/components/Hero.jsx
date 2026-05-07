@@ -114,9 +114,9 @@ export default function Hero() {
                 </button>
 
                 {showResumes && (
-                  <div className="absolute left-0 sm:left-auto sm:right-0 top-full mt-2 w-64 bg-white border-2 border-text-primary shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] z-50 animate-fade-in">
-                    <div className="p-2 border-b border-border bg-bg-code">
-                      <p className="text-[9px] font-mono font-bold text-text-light uppercase tracking-widest">Select Version:</p>
+                  <div className="absolute left-0 sm:left-auto sm:right-0 top-full mt-2 w-72 bg-white border-2 border-text-primary shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] z-[100] animate-fade-in">
+                    <div className="p-3 border-b border-border bg-bg-code">
+                      <p className="text-[10px] font-mono font-bold text-text-light uppercase tracking-widest">Select Version:</p>
                     </div>
                     {RESUMES.map((r) => (
                       <a
@@ -124,9 +124,11 @@ export default function Hero() {
                         href={r.file}
                         download
                         onClick={() => setShowResumes(false)}
-                        className="block w-full text-left px-4 py-3 text-[10px] font-mono font-bold text-text-secondary hover:text-accent hover:bg-bg-code border-b last:border-b-0 border-border transition-colors uppercase tracking-wider"
+                        className="block w-full text-left px-5 py-4 text-xs font-mono font-bold text-text-secondary hover:text-accent hover:bg-bg-code border-b last:border-b-0 border-border transition-all uppercase tracking-wider group"
                       >
-                        {r.name}
+                        <span className="group-hover:translate-x-1 inline-block transition-transform duration-150">
+                          {r.name}
+                        </span>
                       </a>
                     ))}
                   </div>
