@@ -94,29 +94,35 @@ export default function Hero() {
                 GITHUB
               </a>
 
-              {/* Multi-Resume Dropdown */}
-              <div className="relative" ref={dropdownRef}>
+              {/* Multi-Resume Accordion */}
+              <div className="flex flex-col gap-0 w-full sm:w-auto" ref={dropdownRef}>
                 <button
                   onClick={() => setShowResumes(!showResumes)}
-                  className={`inline-flex items-center gap-2 px-6 py-3 border-2 transition-all duration-150 text-xs font-bold tracking-[0.15em] uppercase ${
+                  className={`inline-flex items-center justify-between sm:justify-start gap-4 px-6 py-3 border-2 transition-all duration-300 text-xs font-bold tracking-[0.15em] uppercase w-full sm:w-auto ${
                     showResumes 
-                      ? "border-text-primary text-text-primary bg-white shadow-lg" 
+                      ? "border-accent text-accent bg-bg-code" 
                       : "border-border text-text-secondary hover:border-text-primary hover:text-text-primary bg-bg-code"
                   }`}
                 >
-                  <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                  DOWNLOAD RESUME
-                  <svg className={`w-3 h-3 ml-1 transition-transform duration-200 ${showResumes ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="flex items-center gap-2">
+                    <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    DOWNLOAD RESUME
+                  </div>
+                  <svg className={`w-3 h-3 transition-transform duration-300 ${showResumes ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
 
-                {showResumes && (
-                  <div className="absolute left-0 sm:left-auto sm:right-0 top-full mt-2 w-72 bg-white border-2 border-text-primary shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] z-[100] animate-fade-in">
+                <div 
+                  className={`grid transition-all duration-300 ease-in-out ${
+                    showResumes ? "grid-rows-[1fr] opacity-100 mt-2" : "grid-rows-[0fr] opacity-0 mt-0"
+                  }`}
+                >
+                  <div className="overflow-hidden border-x-2 border-b-2 border-border bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                     <div className="p-3 border-b border-border bg-bg-code">
-                      <p className="text-[10px] font-mono font-bold text-text-light uppercase tracking-widest">Select Version:</p>
+                      <p className="text-[10px] font-mono font-bold text-text-light uppercase tracking-widest">Tailored Versions:</p>
                     </div>
                     {RESUMES.map((r) => (
                       <a
@@ -132,7 +138,7 @@ export default function Hero() {
                       </a>
                     ))}
                   </div>
-                )}
+                </div>
               </div>
             </div>
           </div>
