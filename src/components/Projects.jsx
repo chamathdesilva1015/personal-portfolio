@@ -151,6 +151,25 @@ const PROJECTS_DATA = [
       "/Stock/Screenshot 2026-05-04 at 1.02.36 PM.png",
     ],
   },
+  {
+    id: "G",
+    title: "Duplicate Finder & Remover",
+    github: "https://github.com/chamathdesilva1015/Duplicate_finder",
+    problem: "Locating and deleting duplicate images and videos manually is tedious, and simple file hashing fails when duplicate media files differ in resolution, compression, or format.",
+    solution: "A multi-threaded Python/Tkinter dashboard that combines binary MD5 hashing with perceptual hashing (pHash, dHash) and video frame-signature extraction.",
+    function: "Scans directories for exact and visually similar media, presenting a side-by-side comparison UI with quality-based auto-selection and animated validation overlay.",
+    highlights: [
+      "Implemented exact-match detection using MD5 and visual similarity clustering using dual perceptual hashing (pHash & dHash).",
+      "Developed a frame-signature extraction pipeline using OpenCV to detect duplicate videos by analyzing temporal frame sequences.",
+      "Built an interactive side-by-side Tkinter review GUI featuring an animated validation overlay and quality-based auto-retention rules."
+    ],
+    collaborators: "Solo Project",
+    metric: "Streamlined clutter cleanup via automated visual and exact deduplication.",
+    archFlow: "[Raw Files] -> [Multi-Threaded Hashing (MD5 + pHash/dHash + OpenCV)] -> [Clustering Engine] -> [Interactive Tkinter Review] -> [Safe Trash Deletion]",
+    images: [
+      "/screenshot.png",
+    ],
+  },
 ];
 
 function DocProject({ proj, index, visible }) {
