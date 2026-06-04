@@ -18,6 +18,7 @@ const RESUMES = [
 
 const GITHUB_LINKS = [
   { name: "Main Profile", url: "https://github.com/chamathdesilva1015" },
+  { name: "Duplicate Finder", url: "https://github.com/chamathdesilva1015/Duplicate_finder" },
   { name: "Media Tracker", url: "https://github.com/chamathdesilva1015/Silvas-Media-Tracker" },
   { name: "CanAfford", url: "https://github.com/chamathdesilva1015/CanAfford" },
   { name: "File Search", url: "https://github.com/chamathdesilva1015/concurrent-file-search" },
@@ -67,7 +68,7 @@ export default function Hero() {
 
             {/* Blurb */}
             <p className="animate-fade-up-delay-2 mt-6 max-w-2xl text-sm sm:text-base font-mono text-text-secondary leading-relaxed">
-              I'm a third-year CS student at McMaster University. I spend most of my time building concurrent systems, data pipelines, and web platforms. Whether it's writing threaded C++ tools or deploying ML models, I care about how things work under the hood and what they actually achieve.
+              I'm a third-year CS student at McMaster University. I build software to solve real, practical problems—whether that's automating repetitive tasks, analyzing messy data, or creating tools that make day-to-day life a bit easier. I care about writing clean, functional code that actually gets the job done.
             </p>
 
             {/* ── Button stack ─────────────────────── */}
