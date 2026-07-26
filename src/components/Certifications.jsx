@@ -30,7 +30,7 @@ const CERTIFICATIONS = [
   {
     title: "Foundations of Risk Management Course",
     issuer: "University of Toronto",
-    year: "Ongoing / Exp. July 2026",
+    year: "July 2026",
     focus: [
       "Enterprise Risk Management (ERM): Identifying and assessing risks from a comprehensive, organization-wide perspective.",
       "Risk Identification & Analysis: Utilizing tools like risk registers and heat mapping to analyze qualitative and quantitative impact.",
